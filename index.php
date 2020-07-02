@@ -1,8 +1,10 @@
 <?php
 
-    $server_key = "";
+    $server_key = "SB-Mid-server-g8bIwPnHNwyFjbCS8rI0EewP";
     $is_production = false;
-    $api_url = $is_production ? '': 'SB-Mid-server-g8bIwPnHNwyFjbCS8rI0EewP';
+    $api_url = $is_production ?
+    'https://api.midtrans.com/snap/v1/transactions':
+    'https://api.sandbox.midtrans.com/snap/v1/transactions';
 
     if(!strpos($_SERVER['REQUEST_URI'], '/change')){
         http_response_code(404);
