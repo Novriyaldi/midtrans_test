@@ -11,17 +11,17 @@ $api_url = $is_production ?
 
     echo $_SERVER['REQUEST_URI'];
 
-if (!strpos($_SERVER['REQUEST_URI'], '/charge')) {
-    http_response_code(404);
-    echo "wrong path, make sure it's `/charge`";
-    exit();
-}
+// if (!strpos($_SERVER['REQUEST_URI'], '/charge')) {
+//     http_response_code(404);
+//     echo "wrong path, make sure it's `/charge`";
+//     exit();
+// }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(404);
-    echo "Page not found or wrong HTTP request method is used";
-    exit();
-}
+// if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+//     http_response_code(404);
+//     echo "Page not found or wrong HTTP request method is used";
+//     exit();
+// }
 
 $request_body = file_get_contents('php://input');
 header('Content-Type: application/json');
